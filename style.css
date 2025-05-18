@@ -1,0 +1,159 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url('back4.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #633500;
+  line-height: 1.5;
+}
+.container {
+  max-width: 900px;
+  margin: 90px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 80px;
+  border-radius: 15px;
+  box-shadow: 0 90px 90px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+header h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+header p {
+  font-size: 0.5cm;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #000000;
+}
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.section-title {
+  font-size: 2em;
+  color: #000000;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.pengantin {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.orangtua {
+  font-size: 1.1em;
+  color: #000000;
+}
+.akad-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #633500; /* opsional, bisa ubah warna sesuai selera */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lokasi {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.turut-mengundang ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.turut-mengundang li {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #5e4632;
+}
+footer {
+  background: #f7e9d7;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #7a5e46;
+}
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b38763;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.countdown {
+  font-size: 1.5em;
+  color: #8b5e3c;
+  margin-top: 20px;
+}
+.galeri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.galeri img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea, button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+button[type="submit"] {
+  background-color: #b38763;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+/* Efek fade dan muncul dari bawah */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

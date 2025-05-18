@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Pernikahan Alfi & Tika</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    #bukaUndangan {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      z-index: 9999;
+      cursor: pointer;
+      flex-direction: column;
+      font-family: 'Great Vibes', cursive;
+    }
+    #bukaUndangan button {
+      background: #b38763;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .lokasi {
+      background: #fff3e0;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .section-title {
+      font-size: 2em;
+      color: #000;
+      margin-bottom: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Tombol pembuka -->
+<div id="bukaUndangan">
+  <div>Alfi & Tika</div>
+  <button onclick="mulaiUndangan()">Buka Undangan</button>
+</div>
+
+<!-- Konten utama -->
+<div class="container" id="kontenUndangan" style="display: none;">
+  <header>
+    <h1 class="fade-up">Undangan Pernikahan</h1>
+    <p class="fade-up">Assalamualaikum Wr. Wb</p>
+    <p class="fade-up">Maha suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan...</p>
+  </header>
+
+  <section>
+    <h2 class="fade-up">Pengantin</h2>
+    <p class="pengantin">Alfi Sahren</p>
+    <p class="orangtua">Putra dari Bapak Eri Rahman & Ibu Siti Hafsah</p>
+    <p class="pengantin">Mustika Sari</p>
+    <p class="orangtua">Putri dari Bapak Hamedi & Ibu Nadrah Sagala</p>
+  </section>
+
+  <!-- Akad Nikah -->
+  <section>
+    <h2 class="section-title">Akad Nikah</h2>
+    <div class="lokasi">
+      <p>Tanggal: Sabtu, 10 Juni 2025</p>
+      <p>Waktu: 09.00 WIB</p>
+      <p>Lokasi: KAMPONG 11 SEI BARU</p>
+    </div>
+  </section>
+
+  <!-- Resepsi -->
+  <section>
+    <h2 class="section-title">Resepsi</h2>
+    <div class="lokasi">
+      <p>Tanggal: Minggu, 11 Juni 2025</p>
+      <p>Waktu: 11.00 WIB s/d Selesai</p>
+      <p>Lokasi: KAMPONG 11 SEI BARU</p>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section>
+    <h2 class="section-title">Galeri</h2>
+    <div class="galeri">
+      <img src="poto1.jpg" alt="Foto 1" onclick="bukaLightbox(this.src)">
+      <img src="poto2.jpg" alt="Foto 2" onclick="bukaLightbox(this.src)">
+      <img src="foto3.png" alt="Foto 3" onclick="bukaLightbox(this.src)">
+      <img src="foto4.jpg" alt="Foto 4" onclick="bukaLightbox(this.src)">
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" onclick="tutupLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Turut Mengundang -->
+  <section class="turut-mengundang">
+    <h2 class="section-title">Turut Mengundang</h2>
+    <ul>
+      <li>Usman Taroli / Rahimah (Atok enek)</li>
+      <li>Ahmad Zais / Niyah (Atok enek)</li>
+      <li>Hamdani (Incek)</li>
+      <li>Ilham (Incek)</li>
+      <li>Payeluddin Sagala (Incek)</li>
+      <li>Siis Inor (Incek/Ibuk)</li>
+      <li>Rahmansyah (Pakcik)</li>
+      <li>Turut mengundang sekeluarga</li>
+    </ul>
+  </section>
+
+  <!-- RSVP -->
+  <section>
+    <h2 class="section-title">RSVP</h2>
+    <form onsubmit="return kirimWhatsapp(event)">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="hadir" placeholder="Kehadiran (Hadir / Tidak Hadir)" required>
+      <textarea id="pesan" rows="4" placeholder="Pesan untuk pengantin"></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Kesan yang mendalam akan selalu terukir dihati kami, apabila bapak/ibu/saudara/i bisa hadir dan memberikan doa restu kepada kami.</p>
+    <p>Wassalamu'alaikum Wr. Wb</p>
+  </footer>
+
+  
+</div>
+<!-- Nama Editor -->
+<div style="text-align: center; padding: 20px; font-size: 0.9em; color: #555;">
+  <p>Design: <strong>Yufa Printing</strong></p>
+  <p>Jl. Kh. M. Yusuf Said Dsn II Sei Sakat</p>
+  <p>081396454950</p>
+
+</div>
+
+<!-- Audio -->
+<audio id="bg-music" loop>
+  <source src="Musik3.mp3" type="audio/mpeg">
+</audio>
+
+<!-- JavaScript -->
+<script>
+  function mulaiUndangan() {
+    document.getElementById('bukaUndangan').style.display = 'none';
+    document.getElementById('kontenUndangan').style.display = 'block';
+
+    const musik = document.getElementById('bg-music');
+    musik.play().catch(err => {
+      console.log('Musik gagal diputar otomatis:', err);
+    });
+  }
+
+  function bukaLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+
+  function tutupLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  function kirimWhatsapp(event) {
+    event.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const hadir = document.getElementById('hadir').value;
+    const pesan = document.getElementById('pesan').value;
+    const nomorTujuan = '6282162101406';
+
+    const teks = `RSVP Undangan Pernikahan%0ANama: ${nama}%0AKehadiran: ${hadir}%0APesan: ${pesan}`;
+    const url = `https://wa.me/${nomorTujuan}?text=${teks}`;
+    window.open(url, '_blank');
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll('.fade-up');
+    elements.forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.2}s`;
+    });
+  });
+</script>
+</body>
+</html>
